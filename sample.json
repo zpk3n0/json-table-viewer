@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Ada Lovelace", "active": true, "address": { "city": "London", "country": "UK" }, "skills": ["math", "programming"] },
+  { "id": 2, "name": "Alan Turing", "active": false, "address": { "city": "Maida Vale", "country": "UK" }, "skills": ["cryptography", "logic", "computing"] },
+  { "id": 3, "name": "Grace Hopper", "active": true, "address": { "city": "New York", "country": "USA" }, "skills": ["compilers"] }
+]

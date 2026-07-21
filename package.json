@@ -1,0 +1,77 @@
+{
+  "name": "json-table-viewer",
+  "displayName": "JSON Table Viewer by ZPK",
+  "description": "View any JSON file as an interactive table: search with highlighting, per-column filters, sortable columns, and a column picker to show only the fields you need.",
+  "version": "0.0.7",
+  "publisher": "zpk",
+  "author": "ZPK",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zpk3n0/json-table-viewer.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "json",
+    "table",
+    "viewer",
+    "search",
+    "filter",
+    "sort",
+    "data"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jsonTableViewer.viewAsTable",
+        "title": "View as Table",
+        "category": "JSON Table Viewer"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceExtname == .json",
+          "command": "jsonTableViewer.viewAsTable",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .json",
+          "command": "jsonTableViewer.viewAsTable",
+          "group": "navigation"
+        }
+      ]
+    },
+    "customEditors": [
+      {
+        "viewType": "jsonTableViewer.tableEditor",
+        "displayName": "JSON Table",
+        "selector": [
+          {
+            "filenamePattern": "*.json"
+          }
+        ],
+        "priority": "option"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0"
+  }
+}
