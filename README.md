@@ -16,6 +16,22 @@ By ZPK.
 - **Handles nested JSON** — arrays of objects, nested objects (flattened into `parent.child` columns), arrays of primitives, and objects-of-objects all render sensibly as a table.
 - **Runs entirely locally** — everything happens in the webview; no data ever leaves your machine.
 
+## Installation
+
+This extension isn't published on the VS Code Marketplace, so it's installed from source as a `.vsix` package:
+
+```bash
+git clone https://github.com/zpk3n0/json-table-viewer.git
+cd json-table-viewer
+npm install
+npx @vscode/vsce package
+code --install-extension json-table-viewer-*.vsix
+```
+
+Requires [Node.js](https://nodejs.org/) (with npm) to build. After installing, run **"Developer: Reload Window"** in VS Code (or restart it) to activate the extension.
+
+To get updates later, `git pull` and repeat the steps above — VS Code will prompt to overwrite the previous version.
+
 ## Usage
 
 1. Right-click a `.json` file in the Explorer (or open one and use the Command Palette) and choose **View as Table**.
