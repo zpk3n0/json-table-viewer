@@ -3,4 +3,6 @@ src/**
 out/**/*.map
 tsconfig.json
 sample.json
+generate-screenshot.js
+images/**
 **/.gitignore

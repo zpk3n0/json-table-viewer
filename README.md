@@ -4,6 +4,8 @@ View any JSON file as an interactive table, right inside VS Code — no need to 
 
 By ZPK.
 
+![JSON Table Viewer: search highlighting, a sorted column, and the column picker open](images/screenshot.png)
+
 ## Features
 
 - **View as Table** — right-click any `.json` file (or run the command from the Command Palette) to open it as a table alongside your editor.
